@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheel of Fortune!</title>
 </head>
-<body>
-    <script type="module" src="./js/randomWord.js"></script>
-    <script type="module" src="./js/index.js"></script>
+<body onload={showInitialHiddenWord()}>
+    <h1>Wheel of Fortune</h1>
+    <p id="word"></p>
+    <button onclick={showSomeLetters()}>Start</button>
+    <form method="get" id="form">
+        <label>Guess A Letter or Word!</label>
+        </br>
+        <input type="text" name="guess" id="guess">
+        <input type="submit" id="submit">
+    </form>
+    <p id="feedback"></p>
+    <script src="./js/randomWord.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

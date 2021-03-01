@@ -256,4 +256,5 @@ const words = [
   /*module.exports = {
     getRandomWord
   }*/
-  export { getRandomWord };
+
+  //export { getRandomWord };

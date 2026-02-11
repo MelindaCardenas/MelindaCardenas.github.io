@@ -1,0 +1,18 @@
+name: Publish Develop
+
+on:
+  workflow_run:
+    workflows: ["Tests"] 
+    types:
+      - completed
+    branches:
+      - develop
+
+jobs:
+  publish-develop:
+    runs-on: self-hosted
+    # Only run if the CI workflow succeeded
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Run a simple command
+        run: echo "Hello, GitHub Actions!"
